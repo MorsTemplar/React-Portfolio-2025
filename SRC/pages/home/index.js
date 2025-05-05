@@ -8,7 +8,7 @@ export default function Home() {
         Welcome to My Portfolio
       </Typography>
       <Typography variant="h5" className={styles.subheading}>
-        Frontend Developer & UI Enthusiast
+        Web Developer & UI Enthusiast
       </Typography>
       <Typography variant="body1" className={styles.description}>
         Creating beautiful and functional web experiences with React and Material-UI
