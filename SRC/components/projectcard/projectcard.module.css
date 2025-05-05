@@ -1,0 +1,28 @@
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 300px;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+  }
+  
+  .cardMedia {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .cardMedia {
+    transform: scale(1.05);
+  }
+  
+  .cardContent {
+    position: relative;
+    z-index: 1;
+    background: white;
+  }
