@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { PageTitleProvider } from './context/pagetitlecontext';
+import { PageTitleProvider } from './context/PageTitleContext';
 import Layout from './layouts/Layout';
 
 const Home = lazy(() => import('./pages/home'));
