@@ -7,19 +7,19 @@ const projects = [
     id: 1,
     title: 'Weather App',
     description: 'A React app fetching live weather via the OpenWeatherMap API, with dynamic backgrounds and responsive design.',
-    image: "public\images\weather-app.png" ,
+    image: "public/images/weather-app.png" ,
   },
   {
     id: 2,
     title: 'RSS Feed Reader',
     description: 'A Bootstrap-powered feed reader that lets users upload house images and categorize them; built with React and Node.js.',
-    image: "public\images\best_rss_apps.jpg",
+    image: "public/images/best_rss_apps.jpg",
   },
   {
     id: 3,
     title: 'Text Editor',
     description: 'A rich-text editor built in React using Draft.js, featuring formatting controls, auto-save, and export to Markdown.',
-    image: "public\images\text-card-editor.jpg",
+    image: "public/images/text-card-editor.jpg",
   },
 ];
 
