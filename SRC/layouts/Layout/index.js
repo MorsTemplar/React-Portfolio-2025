@@ -7,7 +7,7 @@ import styles from './layout.module.css';
 
 export default function Layout({ children }) {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const isMobile = useMediaQuery(`(max-width:768px)`);
+  const isMobile = useMediaQuery('(max-width:768px)');
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -16,16 +16,17 @@ export default function Layout({ children }) {
   return (
     <div className={styles.root}>
       <Header handleDrawerToggle={handleDrawerToggle} />
-      <nav>
+      <nav className={styles.nav}>
         <SideNav
           mobileOpen={mobileOpen}
           handleDrawerToggle={handleDrawerToggle}
+          isMobile={isMobile}
         />
       </nav>
       <main className={styles.content}>
         {children}
       </main>
-      <Footer />
+      <Footer className={styles.footer} />
     </div>
   );
 }
