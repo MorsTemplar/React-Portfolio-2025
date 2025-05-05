@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <Box className={styles.footer}>
       <Typography variant="body2" component="p">
-        © {new Date().getFullYear()} Your Name. All rights reserved.
+        © {new Date().getFullYear()} M.Saqlain. All rights reserved.
       </Typography>
     </Box>
   );
