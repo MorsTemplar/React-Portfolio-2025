@@ -3,8 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import { PageTitleProvider } from './context/pagetitlecontext';
 import Layout from './layouts/Layout';
 
-const Home = lazy(() => import('./pages/Home'));
-const Education = lazy(() => import('./pages/education'));
+const Home = lazy(() => import('./pages/home'));
+const Education = lazy(() => import('./pages/Education'));
 const Projects = lazy(() => import('./pages/projects'));
 const Contact = lazy(() => import('./pages/contact'));
 
