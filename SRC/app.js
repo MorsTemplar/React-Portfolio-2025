@@ -4,7 +4,7 @@ import { PageTitleProvider } from './context/PageTitleContext';
 import Layout from './layouts/Layout';
 
 const Home = lazy(() => import('./pages/Home'));
-const Education = lazy(() => import('./pages/Education'));
+const Education = lazy(() => import('./pages/education'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Contact = lazy(() => import('./pages/Contact'));
 
