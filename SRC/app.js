@@ -1,12 +1,12 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { PageTitleProvider } from './context/PageTitleContext';
+import { PageTitleProvider } from './context/pagetitlecontext';
 import Layout from './layouts/Layout';
 
 const Home = lazy(() => import('./pages/Home'));
 const Education = lazy(() => import('./pages/education'));
-const Projects = lazy(() => import('./pages/Projects'));
-const Contact = lazy(() => import('./pages/Contact'));
+const Projects = lazy(() => import('./pages/projects'));
+const Contact = lazy(() => import('./pages/contact'));
 
 export default function App() {
   return (
