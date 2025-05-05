@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material';
 import ProjectCard from '../../components/ProjectCard';
-import styles from './projects.module.css';
+import styles from './projectcard.module.css';
 
 const projects = [
   {
