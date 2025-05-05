@@ -1,0 +1,23 @@
+.drawer {
+    width: 240px;
+  }
+  
+  .drawerContainer {
+    padding: 20px 0;
+  }
+  
+  .icon {
+    color: var(--secondary-color);
+  }
+  
+  @media (min-width: 769px) {
+    .drawer {
+      width: 240px;
+      flex-shrink: 0;
+    }
+    
+    .drawerContainer .icon {
+        color: var(--secondary-color);
+    }
+      
+  }
