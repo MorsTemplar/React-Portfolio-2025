@@ -6,7 +6,7 @@ import {
   Work as ProjectsIcon,
   Mail as ContactIcon
 } from '@mui/icons-material';
-import styles from './SideNav.module.css';
+import styles from './sidenav.module.css';
 
 export default function SideNav({ mobileOpen, handleDrawerToggle }) {
   const menuItems = [

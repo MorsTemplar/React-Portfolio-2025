@@ -1,7 +1,7 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Button, Box } from '@mui/material';
-import CustomInput from '../../components/custominput';
+import CustomInput from '../../components/CustomInput';
 import styles from './contact.module.css';
 
 const validationSchema = Yup.object({
