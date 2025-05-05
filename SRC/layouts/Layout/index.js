@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useMediaQuery } from '@mui/material';
-import Header from '../header';
-import SideNav from '../sidenav';
-import Footer from '../footer';
+import Header from '../Header';
+import SideNav from '../Sidenav';
+import Footer from '../Footer';
 import styles from './layout.module.css';
 
 export default function Layout({ children }) {
