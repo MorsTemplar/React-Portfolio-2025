@@ -1,0 +1,38 @@
+.header {
+    background: var(--primary-color) !important;
+    backdrop-filter: blur(10px);
+  }
+  
+  .menuButton {
+    color: white !important;
+    display: none;
+  }
+  
+  .title {
+    flex-grow: 1;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+  }
+  
+  .avatar {
+    width: 40px !important;
+    height: 40px !important;
+    border: 2px solid var(--secondary-color);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .navMenu {
+    margin-top: 45px !important;
+  }
+  
+  .navItem {
+    font-weight: 500 !important;
+    padding: 12px 24px !important;
+  }
+  
+  @media (max-width: 768px) {
+    .menuButton {
+      display: block !important;
+    }
+  }
