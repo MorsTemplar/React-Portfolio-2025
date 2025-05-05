@@ -1,0 +1,39 @@
+.inputContainer {
+    margin: 1rem 0;
+  }
+  
+  .inputField label {
+    color: var(--text-color) !important;
+    font-family: var(--font-body) !important;
+  }
+  
+  .inputField div {
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .inputField div:hover fieldset {
+    border-color: var(--secondary-color) !important;
+  }
+  
+  .inputField div.Mui-focused fieldset {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 8px rgba(255, 87, 34, 0.2);
+  }
+  
+  .error {
+    color: #d32f2f !important;
+    font-size: 0.75rem;
+    margin-top: 4px;
+    padding-left: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    .inputContainer {
+      margin: 0.8rem 0;
+    }
+    
+    .inputField div {
+      font-size: 0.9rem !important;
+    }
+  }
