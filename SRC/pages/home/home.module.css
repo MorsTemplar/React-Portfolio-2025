@@ -1,44 +1,61 @@
 .container {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--dark-bg));
-    color: white;
-    min-height: calc(100vh - 128px); /* Account for header/footer */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  text-align: center;
+  padding: 4rem 2rem;
+  /* dark charcoal → rich black gradient */
+  background: linear-gradient(
+    135deg,
+    #1c1c1e 0%,
+    #000000 100%
+  );
+  color: #e0e0e0; /* soft off-white for body text */
+  min-height: calc(100vh - 128px); /* Account for header/footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-size: 3.5rem !important;
+  margin-bottom: 1rem !important;
+  /* neon magenta accent */
+  color: #ff2d95 !important;
+  text-shadow:
+    0 0 8px rgba(255, 45, 149, 0.6),
+    0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subheading {
+  font-size: 1.8rem !important;
+  margin-bottom: 2rem !important;
+  /* neon cyan highlight */
+  color: #00f0ff !important;
+  text-shadow: 
+    0 0 6px rgba(0, 240, 255, 0.5);
+}
+
+.description {
+  max-width: 600px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  /* slightly dimmer white */
+  color: rgba(224, 224, 224, 0.85);
+}
+
+@media (max-width: 768px) {
   .heading {
-    font-size: 3.5rem !important;
-    margin-bottom: 1rem !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2.5rem !important;
+    /* slightly softer neon for mobile */
+    color: #ff5aad !important;
   }
   
   .subheading {
-    font-size: 1.8rem !important;
-    margin-bottom: 2rem !important;
-    color: var(--secondary-color);
+    font-size: 1.4rem !important;
+    color: #5fffff !important;
   }
   
   .description {
-    max-width: 600px;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    opacity: 0.9;
+    font-size: 1rem;
+    color: rgba(224, 224, 224, 0.75);
   }
-  
-  @media (max-width: 768px) {
-    .heading {
-      font-size: 2.5rem !important;
-    }
-    
-    .subheading {
-      font-size: 1.4rem !important;
-    }
-    
-    .description {
-      font-size: 1rem;
-    }
-  }
+}
