@@ -18,7 +18,7 @@ export default function Header({ handleDrawerToggle }) {
         <Avatar 
           className={styles.avatar}
           onClick={(e) => setAnchorEl(e.currentTarget)}
-          src="public/images/illustration-vectorstyle-drawing.jpg"
+          src="/images/illustration-vectorstyle-drawing.jpg"
         />
         <Menu
           anchorEl={anchorEl}

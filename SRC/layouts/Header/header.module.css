@@ -1,5 +1,9 @@
 .header {
-    background: var(--primary-color) !important;
+  background: linear-gradient(
+    135deg,
+    #1c1c1e 0%,
+    #000000 100%
+  );
     backdrop-filter: blur(10px);
   }
   

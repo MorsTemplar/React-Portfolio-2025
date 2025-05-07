@@ -1,9 +1,5 @@
-// src/components/ProjectCard/index.jsx
-
-import React from 'react';
 import { Card, CardMedia, CardContent, Typography } from '@mui/material';
-import PropTypes from 'prop-types';
-import styles from './projectcard.module.css';  // your card-specific styles
+import styles from './projectcard.module.css';
 
 export default function ProjectCard({ project }) {
   return (
@@ -13,16 +9,21 @@ export default function ProjectCard({ project }) {
         height="200"
         image={project.image}
         alt={project.title}
-        onError={(e) => {
-          e.target.onerror = null;
-          e.target.src = '/images/default.png';
-        }}
       />
-      <CardContent>
-        <Typography gutterBottom variant="h6">
+      <CardContent className={styles.cardContent}>
+        {/* force the heading color */}
+        <Typography 
+          gutterBottom 
+          variant="h6" 
+          sx={{ color: '#f0f0f0 !important' }}
+        >
           {project.title}
         </Typography>
-        <Typography variant="body2" color="textSecondary">
+        {/* force the body text color */}
+        <Typography 
+          variant="body2" 
+          sx={{ color: 'rgba(240,240,240,0.9) !important' }}
+        >
           {project.description}
         </Typography>
       </CardContent>
@@ -30,11 +31,4 @@ export default function ProjectCard({ project }) {
   );
 }
 
-ProjectCard.propTypes = {
-  project: PropTypes.shape({
-    id:          PropTypes.number.isRequired,
-    title:       PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    image:       PropTypes.string.isRequired,
-  }).isRequired,
-};
+

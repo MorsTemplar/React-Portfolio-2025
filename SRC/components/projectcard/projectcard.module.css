@@ -1,28 +1,82 @@
+/* projectcard.module.css */
+
+/* Neon flicker keyframes */
+@keyframes neon-flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.4; }
+}
+
 .card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 300px;
+  background: #111;                      /* deep background */
+  border: 2px solid #0ff;               /* neon-cyan border */
+  box-shadow:
+    0 0 8px   #0ff,
+    0 0 16px  #0ff,
+    0 0 24px  rgba(0, 255, 255, 0.6);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 0 12px  #0ff,
+    0 0 24px  #0ff,
+    0 0 48px  rgba(0, 255, 255, 0.8);
+}
+
+.cardMedia {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover .cardMedia {
+  transform: scale(1.05);
+  box-shadow:
+    inset 0 0 8px  #0ff,
+    inset 0 0 16px #0ff;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.85);       /* semi‐transparent dark overlay */
+  color: #f0f0f0 !important;                      /* off-white text */
+  padding: 1rem;
+}
+
+/* Neon title inside the card */
+.cardContent h6 {
+  margin: 0 0 0.5rem;
+  color: #ff2d95;                        /* neon magenta */
+  text-shadow:
+    0 0 4px  #ff2d95,
+    0 0 8px  #ff2d95,
+    0 0 16px rgba(255, 45, 149, 0.6);
+  animation: neon-flicker 1.8s infinite alternate;
+}
+
+/* Regular body text */
+.cardContent p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.cardContent, 
+.cardContent * {
+  color: #f0f0f0 !important;
+}
+
+/* Responsive tweak (optional) */
+@media (max-width: 768px) {
+  .card {
+    min-height: 250px;
   }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+  .cardContent h6 {
+    font-size: 1rem;
   }
-  
-  .cardMedia {
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .card:hover .cardMedia {
-    transform: scale(1.05);
-  }
-  
-  .cardContent {
-    position: relative;
-    z-index: 1;
-    background: white;
-  }
+}
