@@ -1,40 +1,40 @@
-import { Grid } from '@mui/material';
-import ProjectCard from '../../components/ProjectCard';
-import styles from './projectcard.module.css';
+// src/components/ProjectCard/index.jsx
 
+import React from 'react';
+import { Card, CardMedia, CardContent, Typography } from '@mui/material';
+import PropTypes from 'prop-types';
+import styles from './projectcard.module.css';  // your card-specific styles
 
-const projects = [
-  {
-    id: 1,
-    title: 'Weather App',
-    description: 'A React app fetching live weather via the OpenWeatherMap API, with dynamic backgrounds and responsive design.',
-    image: "/images/weather-app.png" ,
-  },
-  {
-    id: 2,
-    title: 'RSS Feed Reader',
-    description: 'A Bootstrap-powered feed reader that lets users upload house images and categorize them; built with React and Node.js.',
-    image: "/images/best_rss_apps.jpg",
-  },
-  {
-    id: 3,
-    title: 'Text Editor',
-    description: 'A rich-text editor built in React using Draft.js, featuring formatting controls, auto-save, and export to Markdown.',
-    image: "/images/text-card-editor.jpg",
-  },
-];
-
-export default function Projects() {
+export default function ProjectCard({ project }) {
   return (
-    <div className={styles.container}>
-      <h1>My Projects</h1>
-      <Grid container spacing={4}>
-        {projects.map(project => (
-          <Grid item xs={12} sm={6} md={4} key={project.id}>
-            <ProjectCard project={project} />
-          </Grid>
-        ))}
-      </Grid>
-    </div>
+    <Card className={styles.card}>
+      <CardMedia
+        component="img"
+        height="200"
+        image={project.image}
+        alt={project.title}
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = '/images/default.png';
+        }}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h6">
+          {project.title}
+        </Typography>
+        <Typography variant="body2" color="textSecondary">
+          {project.description}
+        </Typography>
+      </CardContent>
+    </Card>
   );
 }
+
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    id:          PropTypes.number.isRequired,
+    title:       PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    image:       PropTypes.string.isRequired,
+  }).isRequired,
+};

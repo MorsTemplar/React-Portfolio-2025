@@ -1,26 +1,13 @@
+// src/pages/projects/index.jsx
+
 import { Grid } from '@mui/material';
 import ProjectCard from '../../components/ProjectCard';
 import styles from './projects.module.css';
 
 const projects = [
-  {
-    id: 1,
-    title: 'Weather App',
-    description: 'A React app fetching live weather via the OpenWeatherMap API, with dynamic backgrounds and responsive design.',
-    image: "/images/weather-app.png",
-  },
-  {
-    id: 2,
-    title: 'RSS Feed Reader',
-    description: 'A Bootstrap-powered feed reader that lets users upload house images and categorize them; built with React and Node.js.',
-    image: "/images/best_rss_apps.jpg",
-  },
-  {
-    id: 3,
-    title: 'Text Editor',
-    description: 'A rich-text editor built in React using Draft.js, featuring formatting controls, auto-save, and export to Markdown.',
-    image: "/images/text-card-editor.jpg",
-  },
+  { id: 1, title: 'Weather App',    description: '…', image: '/images/weather-app.png' },
+  { id: 2, title: 'RSS Feed Reader', description: '…', image: '/images/best_rss_apps.jpg' },
+  { id: 3, title: 'Text Editor',     description: '…', image: '/images/text-card-editor.jpg' },
 ];
 
 export default function Projects() {
