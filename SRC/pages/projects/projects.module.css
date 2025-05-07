@@ -5,7 +5,7 @@
     135deg,
     #1c1c1e 0%,
     #000000 100%
-  ); /* pitch-black background */
+  );
 }
 
 .title {
@@ -24,7 +24,6 @@
 
 .gridContainer {
   padding: 0 2rem;
-  /* ensure cards sit on the black background */
 }
 
 /* Neon flicker keyframes (same as Home) */

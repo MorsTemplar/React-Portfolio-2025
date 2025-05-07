@@ -1,6 +1,4 @@
-/* projectcard.module.css */
 
-/* Neon flicker keyframes */
 @keyframes neon-flicker {
   0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
   20%, 24%, 55% { opacity: 0.4; }
@@ -12,8 +10,8 @@
   border-radius: 12px !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   min-height: 300px;
-  background: #111;                      /* deep background */
-  border: 2px solid #0ff;               /* neon-cyan border */
+  background: #111;                      
+  border: 2px solid #0ff;               
   box-shadow:
     0 0 8px   #0ff,
     0 0 16px  #0ff,
@@ -44,15 +42,15 @@
 .cardContent {
   position: relative;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.85);       /* semi‐transparent dark overlay */
-  color: #f0f0f0 !important;                      /* off-white text */
+  background: rgba(0, 0, 0, 0.85);       
+  color: #f0f0f0 !important;                      
   padding: 1rem;
 }
 
-/* Neon title inside the card */
+
 .cardContent h6 {
   margin: 0 0 0.5rem;
-  color: #ff2d95;                        /* neon magenta */
+  color: #ff2d95;                        
   text-shadow:
     0 0 4px  #ff2d95,
     0 0 8px  #ff2d95,
@@ -60,7 +58,7 @@
   animation: neon-flicker 1.8s infinite alternate;
 }
 
-/* Regular body text */
+
 .cardContent p {
   margin: 0;
   opacity: 0.9;
@@ -71,7 +69,7 @@
   color: #f0f0f0 !important;
 }
 
-/* Responsive tweak (optional) */
+
 @media (max-width: 768px) {
   .card {
     min-height: 250px;

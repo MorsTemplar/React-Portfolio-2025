@@ -17,7 +17,7 @@
 .heading {
   font-size: 3.5rem !important;
   margin-bottom: 1rem !important;
-  color: #39ff14; /* neon green */
+  color: #39ff14;
   text-shadow:
     0 0 5px #39ff14,
     0 0 10px #39ff14,
@@ -30,7 +30,7 @@
 .subheading {
   font-size: 1.8rem !important;
   margin-bottom: 2rem !important;
-  color: #ff00ff; /* neon magenta */
+  color: #ff00ff;
   text-shadow:
     0 0 4px #ff00ff,
     0 0 8px #ff00ff,
@@ -46,7 +46,7 @@
   color: rgba(240, 240, 240, 0.8);
 }
 
-/* Neon flicker keyframes */
+
 @keyframes flicker {
   0%, 18%, 22%, 25%, 53%, 57%, 100% {
     opacity: 1;
@@ -56,7 +56,7 @@
   }
 }
 
-/* Mobile adjustments */
+
 @media (max-width: 768px) {
   .heading {
     font-size: 2.5rem !important;
