@@ -1,21 +1,31 @@
-
+import { useEffect, useState } from 'react';
 import { Grid } from '@mui/material';
+import axios from '../../api/axiosInstance';
 import ProjectCard from '../../components/ProjectCard';
 import styles from './projects.module.css';
 
-const projects = [
-  { id: 1, title: 'Weather App',    description: 'A React app fetching live weather via the OpenWeatherMap API, with dynamic backgrounds and responsive design.', image: '/images/weather-app.png' },
-  { id: 2, title: 'RSS Feed Reader', description: 'A Bootstrap-powered feed reader that lets users upload house images and categorize them; built with React and Node.js.', image: '/images/best_rss_apps.jpg' },
-  { id: 3, title: 'Text Editor',     description: 'A rich-text editor built in React using Draft.js, featuring formatting controls, auto-save, and export to Markdown.', image: '/images/text-card-editor.jpg' },
-];
-
 export default function Projects() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const res = await axios.get('/api/projects');
+        setProjects(res.data);
+      } catch (err) {
+        console.error('Failed to fetch projects:', err);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Featured Projects</h1>
       <Grid container spacing={4} className={styles.gridContainer}>
         {projects.map((project) => (
-          <Grid item xs={12} sm={6} md={4} key={project.id}>
+          <Grid item xs={12} sm={6} md={4} key={project._id}>
             <ProjectCard project={project} />
           </Grid>
         ))}
@@ -23,3 +33,4 @@ export default function Projects() {
     </div>
   );
 }
+

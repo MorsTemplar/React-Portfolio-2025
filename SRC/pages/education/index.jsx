@@ -1,20 +1,27 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { usePageTitle } from '../../context/PageTitleContext';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import axios from '../../api/axiosInstance'; // or use 'axios' directly
 import styles from './Education.module.css';
 
 export default function Education() {
-    const { setTitle } = usePageTitle();
-    useEffect(() => {
-      setTitle('Education');
-    }, [setTitle]);
-  
+  const { setTitle } = usePageTitle();
+  const [educationData, setEducationData] = useState([]);
 
-    const educationData = [
-      { degree: 'BSc Artificial Intelligence', university: 'ITU',   year: '2023-2027' },
-      { degree: 'A-LEVEL',                 university: 'BCCG',  year: '2020-2022' }
-    ];
-  
+  useEffect(() => {
+    setTitle('Education');
+
+    const fetchEducation = async () => {
+      try {
+        const res = await axios.get('/api/education');
+        setEducationData(res.data);
+      } catch (err) {
+        console.error('Error fetching education data:', err);
+      }
+    };
+
+    fetchEducation();
+  }, [setTitle]);
 
   return (
     <div className={styles.container}>
@@ -30,7 +37,7 @@ export default function Education() {
           </TableHead>
           <TableBody>
             {educationData.map((edu, index) => (
-              <TableRow key={edu.degree} className={index % 2 === 0 ? styles.evenRow : styles.oddRow}>
+              <TableRow key={edu._id || index} className={index % 2 === 0 ? styles.evenRow : styles.oddRow}>
                 <TableCell>{edu.degree}</TableCell>
                 <TableCell>{edu.university}</TableCell>
                 <TableCell>{edu.year}</TableCell>
