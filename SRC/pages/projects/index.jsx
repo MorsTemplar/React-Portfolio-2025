@@ -1,4 +1,3 @@
-// src/pages/projects/index.jsx
 
 import { Grid } from '@mui/material';
 import ProjectCard from '../../components/ProjectCard';
